@@ -19,10 +19,10 @@ namespace Tyuiu.PisarevMA.Sprint2.Task4.V12.Test
         public void ValidCondition2()
         {
             DataService ds = new DataService();
-            double x = 2;
-            double y = 0.5;
+            double x = 9;
+            double y = 4;
             double res = ds.Calculate(x, y);
-            double wait = 225;
+            double wait = 8.822;
             Assert.AreEqual(wait, res);
         }
     }
