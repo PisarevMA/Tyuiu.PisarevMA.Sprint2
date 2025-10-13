@@ -5,52 +5,56 @@ namespace Tyuiu.PisarevMA.Sprint2.Task5.V7.Lib
     {
         public string FindMonthName(int startYear, int n)
         {
-            n = n % 12;
-            string month;
+            startYear = 0;
+            string res;
+            while (n > 12)
+            {
+                int Year = Math.DivRem(n, 12, out n);
+            }
 
             switch (n)
             {
+                case 0:
+                    res = "январь";
+                    break;
                 case 1:
-                    month = "Январь";
+                    res = "февраль";
                     break;
                 case 2:
-                    month = "Февраль";
+                    res = "март";
                     break;
                 case 3:
-                    month = "Март";
+                    res = "апрель";
                     break;
                 case 4:
-                    month = "Аперель";
+                    res = "май";
                     break;
                 case 5:
-                    month = "Май";
+                    res = "июнь";
                     break;
                 case 6:
-                    month = "Июнь";
+                    res = "июль";
                     break;
                 case 7:
-                    month = "Июль";
+                    res = "август";
                     break;
                 case 8:
-                    month = "Август";
+                    res = "сентябрь";
                     break;
                 case 9:
-                    month = "Сентябрь";
+                    res = "октябрь";
                     break;
                 case 10:
-                    month = "Октябрь";
+                    res = "ноябрь";
                     break;
                 case 11:
-                    month = "Ноябрь";
-                    break;
-                case 12:
-                    month = "Декабрь";
+                    res = "декабрь";
                     break;
                 default:
-                    month = "Незнаю";
-                    break;
+                    throw new ArgumentException($"Ошибка в значении месяца. Значение " + n);
+
             }
-            return month;
+            return res;
         }
     }
 }

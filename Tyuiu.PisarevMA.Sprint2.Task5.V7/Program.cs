@@ -15,15 +15,15 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
 
-Console.Write("Введите количество прошедших месяцев: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int year = 1990;
-string res = ds.FindMonthName(year, n);
+int month = Convert.ToInt32(Console.ReadLine());
+string res;
+
+res = "Это месяц - " + ds.FindMonthName(0, month);
 
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 Console.WriteLine("***************************************************************************");
 
-Console.WriteLine("Ваш месяц: " + res);
+Console.WriteLine(res);
 
 Console.ReadKey();
