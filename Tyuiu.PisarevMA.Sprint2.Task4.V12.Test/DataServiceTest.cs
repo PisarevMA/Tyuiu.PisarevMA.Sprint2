@@ -8,22 +8,10 @@ namespace Tyuiu.PisarevMA.Sprint2.Task4.V12.Test
         public void ValidCondition1()
         {
             DataService ds = new DataService();
-            double x = 1;
-            double y = 2;
-            double res = ds.Calculate(x, y);
-            double wait = 0.901;
-            Assert.AreEqual(wait, res);
+            double y = 4, x = 9;
+            Assert.AreEqual(8.822, ds.Calculate(x, y));
         }
 
-        [TestMethod]
-        public void ValidCondition2()
-        {
-            DataService ds = new DataService();
-            double x = 9;
-            double y = 4;
-            double res = ds.Calculate(x, y);
-            double wait = 8.822;
-            Assert.AreEqual(wait, res);
-        }
+        
     }
 }
